@@ -1,0 +1,128 @@
+.container {
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.leftContent {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  background-image: url("../../images/clouds.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+}
+
+.weatherInfo {
+  left: 100px;
+  position: absolute;
+  width: 55%;
+  height: 20%;
+  margin-top: 70%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.time {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: -10px;
+  font-size: 18px;
+  width: 100%;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.weather {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  align-items: center;
+}
+
+.condition {
+  position: relative;
+  margin-top: -22px;
+}
+
+.icon {
+  width: 70px;
+}
+
+.rightContent {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 40%;
+  background: #0f2027;
+  background: linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
+}
+
+.inputs {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  color: white;
+}
+
+.weatherDetails {
+  color: white;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  row-gap: 30px;
+  font-size: 16px;
+}
+
+.cloudInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchLocation {
+  width: 90%;
+  margin-top: 30px;
+}
+
+#searchIcon {
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.temperature h1 {
+  font-size: 90px;
+}
+
+.city h2 {
+  font-size: 50px;
+}
+
+.line {
+  width: 90%;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+
+.line2 {
+  width: 90%;
+  border: 1px solid white;
+  margin-top: 40px;
+}
