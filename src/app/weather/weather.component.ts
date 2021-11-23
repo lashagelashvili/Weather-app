@@ -26,8 +26,8 @@ export class WeatherComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
-    this.http.get<Api>(this.url + 'Lodon').subscribe(data => {
+  onClick(city: string) {
+    this.http.get<Api>(this.url + city).subscribe(data => {
       this.apiResult = data;
       console.log(this.apiResult);
 

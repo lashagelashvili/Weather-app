@@ -15,8 +15,7 @@
             </div>
             <div class="weather">
                 <div class="icon">
-                    <img [src]="iconUrl" alt="" class="icon">
-
+                    <img [src]="iconUrl" alt="">
                 </div>
                 <div class="condition">
                     <p>{{ weather }}</p>
@@ -26,13 +25,9 @@
     </div>
     <div class="rightContent">
         <div class="inputs">
-            <mat-form-field class="searchLocation" appearance="fill">
-                <mat-label>Search Location</mat-label>
-                <input matInput>
-            </mat-form-field>
-            <mat-icon id="searchIcon">search</mat-icon>
+            <input type="text" class="searchLocation" placeholder="Search Location" #cityInput>
+            <mat-icon (click)="onClick(cityInput.value)" id="searchIcon">search</mat-icon>
         </div>
-        <hr class="line">
         <div class="weatherDetails">
             <h3>Weather Details</h3>
             <div class="cloudInfo">
@@ -51,4 +46,3 @@
         <hr class="line2">
     </div>
 </div>
-<button (click)="onClick()">click</button>
