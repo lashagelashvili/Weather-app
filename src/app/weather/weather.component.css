@@ -99,12 +99,29 @@
 
 .searchLocation {
   width: 90%;
+  height: 60px;
   margin-top: 30px;
+  /* padding: 12px 20px; */
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 18px;
+}
+
+.searchLocation:focus {
+  outline: none;
 }
 
 #searchIcon {
   font-size: 40px;
   margin-left: 10px;
+}
+
+#searchIcon:hover {
+  cursor: pointer;
 }
 
 .temperature h1 {
