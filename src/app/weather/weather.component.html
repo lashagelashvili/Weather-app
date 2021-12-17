@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="leftContent">
+    <div class="leftContent" [ngClass]="bgImage">
         <div class="weatherInfo" *ngIf="weatherData">
             <div class="temperature">
                 <h1>{{ weatherData.current.temp_c }}°</h1>
@@ -40,19 +40,17 @@
             </div>
             <div class='weather-details'>
                 <p>Wind</p>
-                <p>{{ weatherData.current.wind_kph }}km/h</p>
+                <p>{{ weatherData.current.wind_kph }} km/h</p>
             </div>
             <div class='weather-details'>
                 <p>Gust</p>
-                <p>{{ weatherData.current.gust_kph }}km/h</p>
+                <p>{{ weatherData.current.gust_kph }} km/h</p>
             </div>
             <div class='weather-details'>
                 <p>Pressure</p>
-                <p>{{ weatherData.current.pressure_mb }}hPa</p>
+                <p>{{ weatherData.current.pressure_mb }} hPa</p>
             </div>
             <hr class="line2">
         </div>
     </div>
 </div>
-<!-- [ngStyle]="{'background-image': 'url(../../images/snow.jpg)'}" -->
-<!-- [style.background-image]="'url(../../images/snow.jpg)'" -->
