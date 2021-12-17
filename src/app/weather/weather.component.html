@@ -1,24 +1,24 @@
 <div class="container">
     <div class="leftContent">
-        <div class="weatherInfo">
+        <div class="weatherInfo" *ngIf="weatherData">
             <div class="temperature">
-                <h1>{{ temperature }}°</h1>
+                <h1>{{ weatherData.current.temp_c }}°</h1>
             </div>
             <div class="info">
                 <div class="city">
-                    <h2>{{ city }}</h2>
+                    <h2>{{ weatherData.location.name }}</h2>
                 </div>
                 <div class="time">
-                    <p>{{ date | date:'shortTime'}}</p>
-                    <p>{{ date | date:'MM/dd/yy'}}</p>
+                    <p>{{ weatherData.location.localtime | date:'shortTime'}}</p>
+                    <p>{{ weatherData.location.localtime | date:'MM/dd/yy'}}</p>
                 </div>
             </div>
             <div class="weather">
                 <div class="icon">
-                    <img [src]="iconUrl" alt="">
+                    <img [src]="weatherData.current.condition.icon" alt="">
                 </div>
                 <div class="condition">
-                    <p>{{ weather }}</p>
+                    <p>{{ weatherData.current.condition.text }}</p>
                 </div>
             </div>
         </div>
@@ -28,22 +28,22 @@
             <input type="text" class="searchLocation" placeholder="Search Location" #cityInput>
             <mat-icon (click)="onClick(cityInput.value)" id="searchIcon">search</mat-icon>
         </div>
-        <div class="weatherDetails">
+        <div class="weatherDetails" *ngIf="weatherData">
             <h3>Weather Details</h3>
             <div class="cloudInfo">
                 <p>Cloud</p>
-                <p>{{ cloud }}%</p>
+                <p>{{ weatherData.current.cloud }}%</p>
             </div>
             <div class='cloudInfo'>
                 <p>Humidity</p>
-                <p>{{ humidity }}%</p>
+                <p>{{ weatherData.current.humidity }}%</p>
             </div>
             <div class='cloudInfo'>
                 <p>Wind</p>
-                <p>{{ wind }}km/h</p>
+                <p>{{ weatherData.current.wind_kph }}km/h</p>
             </div>
+            <hr class="line2">
         </div>
-        <hr class="line2">
     </div>
 </div>
 <!-- [ngStyle]="{'background-image': 'url(../../images/snow.jpg)'}" -->
