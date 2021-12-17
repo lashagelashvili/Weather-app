@@ -28,19 +28,27 @@
             <input type="text" class="searchLocation" placeholder="Search Location" #cityInput>
             <mat-icon (click)="onClick(cityInput.value)" id="searchIcon">search</mat-icon>
         </div>
-        <div class="weatherDetails" *ngIf="weatherData">
+        <div class="weather-container" *ngIf="weatherData">
             <h3>Weather Details</h3>
-            <div class="cloudInfo">
+            <div class="weather-details">
                 <p>Cloud</p>
                 <p>{{ weatherData.current.cloud }}%</p>
             </div>
-            <div class='cloudInfo'>
+            <div class='weather-details'>
                 <p>Humidity</p>
                 <p>{{ weatherData.current.humidity }}%</p>
             </div>
-            <div class='cloudInfo'>
+            <div class='weather-details'>
                 <p>Wind</p>
                 <p>{{ weatherData.current.wind_kph }}km/h</p>
+            </div>
+            <div class='weather-details'>
+                <p>Gust</p>
+                <p>{{ weatherData.current.gust_kph }}km/h</p>
+            </div>
+            <div class='weather-details'>
+                <p>Pressure</p>
+                <p>{{ weatherData.current.pressure_mb }}hPa</p>
             </div>
             <hr class="line2">
         </div>

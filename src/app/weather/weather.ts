@@ -20,6 +20,8 @@ export interface Current {
     wind_kph: number;
     humidity: number;
     cloud: number;
+    gust_kph: number;
+    pressure_mb: number;
 }
 
 export interface Condition {
