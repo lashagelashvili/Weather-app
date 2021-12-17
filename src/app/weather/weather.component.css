@@ -15,7 +15,7 @@
   position: absolute;
   width: 60%;
   height: 100%;
-  background-image: url("../../images/snow.jpg");
+  /* background-image: url("../../images/snow.jpg"); */
   background-size: cover;
   background-position: center;
 }
@@ -140,4 +140,20 @@
 .line2 {
   width: 100%;
   border: 1px solid white;
+}
+
+.bg-clouds {
+  background-image: url("../../images/clouds.jpg");
+}
+
+.bg-rain {
+  background-image: url("../../images/rain.jpg");
+}
+
+.bg-snow {
+  background-image: url("../../images/snow.jpg");
+}
+
+.bg-sun {
+  background-image: url("../../images/sun.jpg");
 }
